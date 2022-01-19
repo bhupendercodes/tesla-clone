@@ -1,0 +1,43 @@
+.header__block__container {
+  height: 100vh;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  position: absolute;
+  scroll-behavior: smooth;
+  .scroll__snapping {
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    .block__1 {
+      background: url("../../../Assets/Images/model__3.jpg") center no-repeat;
+      background-size: cover;
+    }
+    .block__2 {
+      background: url("../../../Assets/Images/model__y.jpg") center no-repeat;
+      background-size: cover;
+    }
+    .block__3 {
+      background: url("../../../Assets/Images/model__s.jpg") center no-repeat;
+      background-size: cover;
+    }
+    .block__4 {
+      background: url("../../../Assets/Images/model__x.jpg") center no-repeat;
+      background-size: cover;
+    }
+    .block__5 {
+      background: url("../../../Assets/Images/solar__panels.jpg") center no-repeat;
+      background-size: cover;
+    }
+    .block__6 {
+      background: url("../../../Assets/Images/solar__roofs.jpg") center no-repeat;
+      background-size: cover;
+    }
+    .block__7 {
+      background: url("../../../Assets/Images/accessories.jpg") center no-repeat;
+      background-size: cover;
+    }
+  }
+}

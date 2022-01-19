@@ -1,0 +1,52 @@
+.account__header {
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  justify-content: space-between;
+  .logo__icon {
+    width: 100px;
+  }
+  .sign__out {
+    border: none;
+    outline: none;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 6px 15px;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.2s;
+    background-color: transparent;
+    &:hover {
+      background-color: #80808020;
+    }
+    span {
+      font-weight: bolder;
+    }
+  }
+}
+@media screen and (max-width: 1123px) {
+  .account__header {
+    padding: 10px 25px;
+    .logo__icon {
+      width: 90px;
+    }
+    .sign__out {
+      padding: 6px 10px;
+    }
+  }
+}
+@media screen and (max-width: 1052px) {
+  .account__header {
+    padding: 10px 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .account__header {
+    padding: 10px 20px;
+    .logo__icon {
+      width: 80px;
+    }
+  }
+}

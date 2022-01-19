@@ -1,0 +1,56 @@
+@mixin menu__list {
+  gap: 12px;
+  z-index: 1;
+  padding-left: 20px;
+  overflow-y: scroll;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  flex-direction: column;
+  height: calc(100vh - 71px);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.menu {
+  z-index: 1;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  min-width: 300px;
+  padding-top: 54px;
+  inset: 0 0 0 auto;
+  background-color: #ffffff;
+  
+  h4 {
+    display: flex;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 10px;
+    padding-bottom: 7px;
+    letter-spacing: 0.5px;
+    &:hover{
+      background-color: #0000000b;
+    }
+  }
+
+  .menu__list__lg {
+    display: flex;
+    @include menu__list();
+  }
+  .menu__list__md {
+    display: none;
+  }
+}
+@media screen and (max-width: 1052px) {
+  .menu {
+    .menu__list__lg {
+      display: none;
+    }
+    .menu__list__md {
+      display: flex;
+      @include menu__list();
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@mixin flex-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup {
+  gap: 15px;
+  padding-bottom: 40px;
+  @include flex-column();
+
+  .signup__info {
+    gap: 15px;
+    margin: 0 auto;
+    min-width: 330px;
+    @include flex-column();
+
+    h1 {
+      font-size: 35px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .signup__form {
+      @include flex-column();
+      input {
+        outline: none;
+        color: #393c41;
+        font-weight: 600;
+        padding: 12px 20px;
+        margin-bottom: 25px;
+        border-radius: 50px;
+        background-color: #f4f4f4;
+        border: 1px solid #f4f4f4;
+        &:focus {
+          transition: all 0.2s;
+          border: 1px solid #363636;
+        }
+      }
+    }
+
+    .signup__divider {
+      gap: 5px;
+      @include flex-row();
+      justify-content: center;
+      span {
+        position: relative;
+        @mixin divider {
+          content: "";
+          height: 1px;
+          margin: auto;
+          width: 130px;
+          position: absolute;
+          background-color: #000;
+        }
+        &::before {
+          @include divider();
+          inset: 2.5px 0 0 -170px;
+        }
+
+        &::after {
+          @include divider();
+          inset: 2.5px 0 0 30px;
+        }
+      }
+    }
+  }
+}

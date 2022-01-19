@@ -1,0 +1,42 @@
+.card__1 {
+  padding: 0.5px;
+  overflow: hidden;
+  max-width: 316px;
+  max-height: 230px;
+  height: max-content;
+  border-radius: 20px;
+  border: 1px solid #00000046;
+
+  .card__1__header {
+
+    .card__1__image {
+      width: 100%;
+      height: auto;
+      margin: -38px 0 10px;
+      border-radius: 20px 20px 0 0;
+    }
+  }
+
+  .card__1__body {
+    padding: 0 20px 15px;
+
+    p {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+
+      &:nth-child(2) {
+        font-weight: normal;
+        margin-bottom: 8px;
+      }
+    }
+    
+    a {
+      font-size: 13px;
+      color: #000000;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      border-bottom: 0.5px solid black;
+    }
+  }
+}
